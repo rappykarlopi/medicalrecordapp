@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="617.0" prefWidth="953.0" style="-fx-background-color: #f2f6ff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalrecordapp.controller.AddStaffController">
+   <children>
+      <Pane layoutX="458.0" layoutY="85.0" prefHeight="377.0" prefWidth="435.0">
+         <children>
+            <Label layoutX="7.0" layoutY="6.0" text="Staffs Name" />
+            <TextField fx:id="firstNameInput" layoutX="7.0" layoutY="29.0" prefHeight="26.0" prefWidth="202.0" promptText="First Name" />
+            <TextField fx:id="lastNameInput" layoutX="217.0" layoutY="29.0" prefHeight="26.0" prefWidth="202.0" promptText="Last Name" />
+            <Label layoutX="7.0" layoutY="63.0" text="Staffs Age" />
+            <TextField fx:id="ageInput" layoutX="7.0" layoutY="87.0" prefHeight="25.0" prefWidth="183.0" promptText="Age" />
+            <DatePicker fx:id="dateInput" layoutX="206.0" layoutY="87.0" prefHeight="25.0" prefWidth="213.0" promptText="MM/DD/YY" />
+            <Label layoutX="206.0" layoutY="63.0" text="Staff Birth Date" />
+            <TextField fx:id="heightInput" layoutX="7.0" layoutY="144.0" prefHeight="25.0" prefWidth="183.0" promptText="Height" />
+            <Label layoutX="7.0" layoutY="121.0" text="Staffs Height" />
+            <Label layoutX="206.0" layoutY="121.0" text="Staffs Weight" />
+            <TextField fx:id="weightInput" layoutX="206.0" layoutY="145.0" prefHeight="25.0" prefWidth="213.0" promptText="Weight" />
+            <TextField fx:id="numberInput" layoutX="7.0" layoutY="206.0" prefHeight="25.0" prefWidth="183.0" promptText="Phone Number" />
+            <Label layoutX="7.0" layoutY="181.0" text="Staffs Phone Number" />
+            <TextField fx:id="positionInput" layoutX="206.0" layoutY="206.0" prefHeight="25.0" prefWidth="213.0" promptText="Position" />
+            <Label layoutX="206.0" layoutY="182.0" text="Staffs Position" />
+            <Label layoutX="10.0" layoutY="240.0" text="Staff Gender" />
+            <ChoiceBox fx:id="genderInput" layoutX="7.0" layoutY="263.0" prefHeight="25.0" prefWidth="183.0" />
+            <Button id="glass" layoutX="177.0" layoutY="308.0" mnemonicParsing="false" onAction="#addStaff" prefHeight="25.0" prefWidth="64.0" stylesheets="@stylesheet.css" text="Add" textFill="WHITE" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="-9.0" prefHeight="618.0" prefWidth="390.0" styleClass="backgroundColor" stylesheets="@style.css">
+         <children>
+            <Label layoutX="74.0" layoutY="43.0" text="HealthLog Elite" textFill="#ecf5ff">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="33.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship.&quot; - Buddha" textAlignment="CENTER" wrappingWidth="323.30743408203125">
+               <font>
+                  <Font name="Segoe UI Light" size="45.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button id="glass" layoutX="395.0" layoutY="578.0" mnemonicParsing="false" onAction="#backFromStaff" stylesheets="@stylesheet.css" text="Back" textFill="WHITE" />
+      <Label fx:id="statusLabel" layoutX="569.0" layoutY="582.0" prefHeight="17.0" prefWidth="183.0" />
+   </children>
+</AnchorPane>

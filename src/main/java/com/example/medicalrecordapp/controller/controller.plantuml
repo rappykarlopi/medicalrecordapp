@@ -1,0 +1,236 @@
+@startuml
+
+title __CONTROLLER's Class Diagram__\n
+
+  namespace  {
+    namespace om.example.medicalrecordapp {
+      namespace controller {
+        class com.example.medicalrecordapp.controller.AddPatientController {
+            + addressInput : TextField
+            + ageInput : TextField
+            + bloodPressureInput : TextField
+            + bloodTypeInput : ChoiceBox
+            + dateAdmitted : DatePicker
+            + dateInput : DatePicker
+            + firstNameInput : TextField
+            + genderInput : ChoiceBox
+            + heightInput : TextField
+            + lastNameInput : TextField
+            + phoneNumberInput : TextField
+            + psychiatristNameInput : TextField
+            + remarksInput : TextField
+            + statusLabel : Label
+            + weightInput : TextField
+            - bloodTypeChoice : ObservableList<String>
+            - filename : String
+            - genderChoice : ObservableList<String>
+            - records : ArrayList<RecordTemplate>
+            + addPatient()
+            + backFromPatient()
+            + initialize()
+            + setRecords()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.medicalrecordapp {
+      namespace controller {
+        class com.example.medicalrecordapp.controller.AddStaffController {
+            + ageInput : TextField
+            + dateInput : DatePicker
+            + firstNameInput : TextField
+            + genderInput : ChoiceBox
+            + heightInput : TextField
+            + lastNameInput : TextField
+            + numberInput : TextField
+            + positionInput : TextField
+            + statusLabel : Label
+            + weightInput : TextField
+            - filename : String
+            - genderChoice : ObservableList<String>
+            - records : ArrayList<RecordTemplate>
+            + addStaff()
+            + backFromStaff()
+            + initialize()
+            + setRecords()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.medicalrecordapp {
+      namespace controller {
+        class com.example.medicalrecordapp.controller.ChooseController {
+            - records : ArrayList<RecordTemplate>
+            + addPatient()
+            + addStaff()
+            + backFromChoose()
+            + setRecords()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.medicalrecordapp {
+      namespace controller {
+        class com.example.medicalrecordapp.controller.ListController {
+            + patientAddress : TableColumn<PatientRecord, String>
+            + patientAge : TableColumn<PatientRecord, Integer>
+            + patientBirth : TableColumn<PatientRecord, Date>
+            + patientBloodPressure : TableColumn<PatientRecord, String>
+            + patientBloodType : TableColumn<PatientRecord, String>
+            + patientGender : TableColumn<PatientRecord, String>
+            + patientHeight : TableColumn<PatientRecord, Double>
+            + patientName : TableColumn<PatientRecord, String>
+            + patientNumber : TableColumn<PatientRecord, String>
+            + patientRemarks : TableColumn<PatientRecord, String>
+            + patientTable : TableView<PatientRecord>
+            + patientWeight : TableColumn<PatientRecord, Double>
+            + staffAge : TableColumn<StaffRecord, Integer>
+            + staffBirthdate : TableColumn<StaffRecord, Date>
+            + staffGender : TableColumn<StaffRecord, String>
+            + staffHeight : TableColumn<StaffRecord, Double>
+            + staffName : TableColumn<StaffRecord, String>
+            + staffNumber : TableColumn<StaffRecord, String>
+            + staffPosition : TableColumn<StaffRecord, String>
+            + staffTable : TableView<StaffRecord>
+            + staffWeight : TableColumn<StaffRecord, Double>
+            - records : ArrayList<RecordTemplate>
+            + backFromList()
+            + initialize()
+            + setRecords()
+            + setTable()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.medicalrecordapp {
+      namespace controller {
+        class com.example.medicalrecordapp.controller.LoginController {
+            + idNum : TextField
+            + passwordField : PasswordField
+            - idNumber : String
+            - password : String
+            - records : ArrayList<RecordTemplate>
+            - root : Pane
+            - stage : Stage
+            + loginClick()
+            + setRecords()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.medicalrecordapp {
+      namespace controller {
+        class com.example.medicalrecordapp.controller.MainController {
+            - records : ArrayList<RecordTemplate>
+            + addClick()
+            + listClick()
+            + removeClick()
+            + setRecords()
+            + viewClick()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.medicalrecordapp {
+      namespace controller {
+        class com.example.medicalrecordapp.controller.RemoveController {
+            + recordList : ListView
+            + removeInput : TextField
+            + statusLabel : Label
+            - filename : String
+            - recordNames : ObservableList<String>
+            - records : ArrayList<RecordTemplate>
+            + backFromRemove()
+            + removeRecord()
+            + setRecords()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.medicalrecordapp {
+      namespace controller {
+        class com.example.medicalrecordapp.controller.ViewController {
+            + address : Label
+            + addressLabel : Label
+            + age : Label
+            + birth : Label
+            + bloodPressure : Label
+            + bloodPressureInput : TextField
+            + bloodType : Label
+            + bpLabel : Label
+            + btLabel : Label
+            + dateAdmitted : Label
+            + dateAdmittedInput : DatePicker
+            + dateAdmittedLabel : Label
+            + editButton : ToggleButton
+            + editModeLabel : Label
+            + gender : Label
+            + height : Label
+            + heightInput : TextField
+            + name : Label
+            + noteArea : TextArea
+            + noteChange : Button
+            + phoneNumber : Label
+            + phoneNumberLabel : Label
+            + phychiatristLabel : Label
+            + position : Label
+            + profilePic : ImageView
+            + psychiatristLabel : Label
+            + psychiatristName : Label
+            + psychiatristNameInput : TextField
+            + saveChanges : Button
+            + searchBox : TextField
+            + weight : Label
+            + weightInput : TextField
+            - edit : boolean
+            - fileChooser : FileChooser
+            - filePath : File
+            - filename : String
+            - records : ArrayList<RecordTemplate>
+            + backFromView()
+            + changeNote()
+            + changePicture()
+            + changeRecord()
+            + editMode()
+            + initialize()
+            + searchRecord()
+            + setRecords()
+            + updateRecord()
+            + viewRecord()
+        }
+      }
+    }
+  }
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
