@@ -26,7 +26,7 @@
       </AnchorPane>
       <AnchorPane prefHeight="421.0" prefWidth="353.0" styleClass="backgroundColor" stylesheets="@style.css">
          <children>
-            <Label layoutX="53.0" layoutY="41.0" text="HealthLog Elite" textFill="#ecf5ff">
+            <Label layoutX="126.0" layoutY="51.0" text="DocuMed" textFill="#ecf5ff">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
